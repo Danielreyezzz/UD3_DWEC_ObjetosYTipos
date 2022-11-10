@@ -1,21 +1,23 @@
 "use strict";
 
-let Calculator = () => {
-  this.a = a;
-  this.b = b;
-  this.read: () => {
+function Calculator()  {
+  //En el constructor, a los métodos se le agregan this.
+  //En este caso se almacenan las variables a y b directamente con el metodo read()
+  this.read = () => {
     this.a = +prompt("Escribe el primer número:");
     this.b = +prompt("Escribe el segundo número:");
   },
-  sum: () => {
-    return a + b;
-  },
-  mul: () => {
-    return a * b;
-  },
+    this.sum = () => {
+      return this.a + this.b;
+    },
+    this.mul = () => {
+      return this.a * this.b;
+    };
 };
 
-let calculadora = new calculator()
-calculator.read();
-alert(calculator.sum());
-alert(calculator.mul());
+//Instanciamos un objeto. Lo llamamos calculadora
+//A este objeto le pasamos los métodos que ha obtenido del constructor
+let calculadora = new Calculator();
+calculadora.read();
+alert(calculadora.sum());
+alert(calculadora.mul());

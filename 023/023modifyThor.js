@@ -6,8 +6,11 @@ let thor = "Thor es el hijo de Odín";
 alert(thor.length);
 
 //Encontrar la letra o
-//Existen varias 'o' en la cadena, pero he supuesto que se pedía encontrar la primera
-alert(thor.indexOf("o"));
+for (let i = 0; i < thor.length; i++) {
+  if (thor[i].match("o|O")) { //Un simple for recorrer la cadena y muestra la posicion de las 'o'
+    alert("Se encuentra una 'o' en la posición: " + i);
+  }
+}
 
 //Encontrar el carácter que ocupa la posición 3
 alert(thor.charAt(3));
@@ -32,8 +35,7 @@ alert(thor.search("a"));
 //El resultado es -1 porque no hay "a"
 
 //Pon la mitad de la cadena en minúsculas (Sin usar las posiciones de 0 a 11)
-let mitadMinus =
-thor.substring(0, 11);
-
-thor.substring(thor.length / 2, thor.length);
-alert(mitadMinus.toLowerCase() + thor.substring(thor.length / 2, thor.length));
+let mitadMinus = thor.substring(thor.length / 2, thor.length);
+alert(thor.substring(0, thor.length / 2) + mitadMinus.toLowerCase());
+//Estoy cambiando la segunda mitad de la frase
+//Como no puedo utilizar posiciones, juego con el largo de la cadena

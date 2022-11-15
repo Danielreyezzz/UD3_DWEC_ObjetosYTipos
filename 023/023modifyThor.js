@@ -7,7 +7,8 @@ alert(thor.length);
 
 //Encontrar la letra o
 for (let i = 0; i < thor.length; i++) {
-  if (thor[i].match("o|O")) { //Un simple for recorrer la cadena y muestra la posicion de las 'o'
+  if (thor[i].match("o|O")) {
+    //Un simple for recorrer la cadena y muestra la posicion de las 'o'
     alert("Se encuentra una 'o' en la posición: " + i);
   }
 }
